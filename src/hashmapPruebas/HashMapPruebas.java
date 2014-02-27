@@ -26,10 +26,12 @@ public class HashMapPruebas {
         Integer num = lista.get("3");
         
         HashMap<String, String> pantallaMovil = new HashMap<String, String>();
-        for (Integer numInt : lista.values()) {
+        for (Iterator<Integer> it = lista.values().iterator(); it.hasNext();) {
+            Integer numInt = it.next();
             System.out.println("Número" + numInt);
         }
-        for (String cadenaClave : lista.keySet()) {
+        for (Iterator<String> it = lista.keySet().iterator(); it.hasNext();) {
+            String cadenaClave = it.next();
             System.out.println("Clave" + cadenaClave);
         }
         
